@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 id="tableLabel">Number to Word Converter</h1>
+
+  <p class="info">The maximum number of dollars is 999 999 999.</p>
+  <p class="info">The maximum number of cents is 99.</p>
+  <p class="info">The separator between dollars and cents is a ‘,’ (comma).</p>
+
+  <input type="text" [(ngModel)]="inputValue" (keyup)="convertInput(inputValue)" placeholder="999999999,99" class="custom-input">
+
+  <p *ngIf="responseData.output" [style.background-color]="'#e3e2e2'" class="response-text">
+    {{ responseData.output }}
+  </p>
+
+  <p *ngIf="responseData.message" [style.background-color]="'#ff00004a'" class="response-text">
+    {{ responseData.message }}
+  </p>
+</div>
+
+
